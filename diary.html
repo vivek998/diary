@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+    <head>
+        <meta charset='utf-8'/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="mydiary.css">
+        <title>My Diary</title>
+    </head>
+    <body> 
+    <h1>My Diary Entries
+        <img id="icon-add" class="icon" 
+                src="http://cdn1.iconfinder.com/data/icons/drf/PNG/plus.png" 
+        alt="Click to add an entry">
+		<img id="icon-connection-lost" class="light" 
+                src="http://cdn1.iconfinder.com/data/icons/fugue/icon/status-busy.png" 
+        alt="No connection available" align="right">
+        </h1>
+        <div id="warning" class="warning hidden">
+            Can't save entry, no local storage available!
+        </div>                
+    <form method="post" id="entry-form" class="entry-form hidden">
+         Title<br/>
+        <input type="text" id="entry-title" name="entry-title"/><br/>
+         Content<br/>
+        <textarea rows="4" cols="10" id="entry-content"></textarea><br/>
+        <button type="submit" form="entry-form" formmethod="post" id="saveEntry" style="margin-left: 5px;">Save entry</button>
+        <button type="reset" form="entry-form" id="saveCancel" style="margin-left: 5px;">Cancel</button>
+     </form>
+    <section id="entries-area" class='entries hidden'>
+    </section>
+    <script type="text/javascript" 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+    </script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="mydiary.js"></script>
+    </body>
+</html>
